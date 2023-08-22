@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\GPSController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\seriesController;
+use App\Http\Controllers\SeriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::get('/listarSeries', [seriesController::class, 'listarSerie']);
 
 Route::get('/home', HomeController::class);
 
+Route::get('/gps', [GPSController::class, 'recalculandoRota']);
 
 
 

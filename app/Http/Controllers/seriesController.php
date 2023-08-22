@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class seriesController extends Controller
+class SeriesController extends Controller
 {
     public function listarSerie()
     {
@@ -14,14 +14,8 @@ class seriesController extends Controller
             "Son's of Anarchy"
         ];
 
-        $html = "<ul>";
 
-        foreach($series as $serie){
-            $html .= "<li>$serie</li>";
-        }
-
-        $html .= "</ul";
-
-        return $html;
+        return view('series/index', ['series' => $series]); // chama a view e passa uma variável
+        //return view('series/index', compact('series'));
     }
 }
