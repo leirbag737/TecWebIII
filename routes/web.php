@@ -24,6 +24,8 @@ Route::get('/home', HomeController::class);
 
 Route::get('/gps', [GPSController::class, 'recalculandoRota']);
 
+Route::get('/series/criar', [SeriesController::class, 'create']);
+
 
 
 

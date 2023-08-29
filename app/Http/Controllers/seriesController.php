@@ -18,4 +18,9 @@ class SeriesController extends Controller
         return view('series/index', ['series' => $series]); // chama a view e passa uma variável
         //return view('series/index', compact('series'));
     }
+
+    public function create()
+    {
+        return view("series.create");
+    }
 }
