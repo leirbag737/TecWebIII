@@ -5,20 +5,8 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeriesController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-//Criar 2 novas rotas para o HomeController. Você vai definir o: - nome dos métodos (ações) e vai definir o retorno desses métodos
-
-Route::get('/listarSeries', [seriesController::class, 'listarSerie']);
+Route::get('/series/', [seriesController::class, 'index']);
 
 Route::get('/home', HomeController::class);
 
