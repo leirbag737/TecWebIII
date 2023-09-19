@@ -4,15 +4,22 @@ use App\Http\Controllers\GPSController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SeriesController;
-
-
-Route::get('/series/', [seriesController::class, 'index']);
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/home', HomeController::class);
 
-Route::get('/gps', [GPSController::class, 'recalculandoRota']);
+Route::get('/series/', [SeriesController::class, 'index']);
 
 Route::get('/series/criar', [SeriesController::class, 'create']);
+
+Route::get('/categorias/', [CategoriaController::class, 'index']);
+
+Route::get('/categorias/criar', [CategoriaController::class, 'create']);
+
+
+
+
+//Route::get('/gps', [GPSController::class, 'recalculandoRota']);
 
 
 
